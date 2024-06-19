@@ -131,8 +131,7 @@ const updateUserService = async (req, res) => {
         await User.findByIdAndUpdate(id, {
             firstName, lastName, email, userName, phone
         })
-        //    await updateUser.save();
-        //    console.log(updateUser);
+        
         return res.status(201).send({ success: true, message: "user update successfully" });
     }
     catch (err) {
